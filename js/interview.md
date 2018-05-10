@@ -1,3 +1,40 @@
 # 面试题总结
 
-> 1、
+### 一、网页加载效率 首次加载白屏 性能优化相关的：
+> 1、后端预渲染；
+> 2、合并请求，例如雪碧图
+> 3、缓存html和js，对一些非及时性的页面和js进行服务器端缓存，例如memcached等
+> 4、使用cdn
+> 5、在反向代理上面增加gzip
+> 7、对http请求加expire过期时间、ETag等
+
+### 二、sessionstorage localstorage 
+> 区别 会话（暂时）、永久  最大 5M
+
+### 三、localstorage cookie 
+> 区别 过期时间、大小  4k
+
+### 四、1像素问题 
+> 通过媒介查询，用 @media -webkit-min-device-pixel-ratio: 2   -webkit-transform: scaleY(0.7)实现
+
+### 五、meta标签
+> <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+> <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+> 这段代码的几个参数解释：
+
+> width = device-width：宽度等于当前设备的宽度
+> initial-scale：初始的缩放比例（默认设置为1.0，即代表不缩放）
+> user-scalable：用户是否可以手动缩放（默认设置为no，因为我们不希望用户放大缩小页面）
+
+> @media screen and (max-width: 300px) and (min-width: 200px) {}
+
+> 类似这样的 meta 标签可能对于进入搜索引擎的索引有帮助：
+
+> <meta name="keywords" content="HTML,ASP,PHP,SQL">
+> 如果没有提供 name 属性，那么名称/值对中的名称会采用 http-equiv 属性的值。
+
+
+### 六、hostcss原理
+> 1、通过  window.devicePixelRatio 获取浏览器dpr值；
+> 2、通过宽度，计算rem值

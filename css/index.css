@@ -1,5 +1,35 @@
 html, body{
-	max-width: 100%;
-	max-height: 100%;
-	background: #999;
+	min-width: 100%;
+	min-height: 100%;
 }
+
+#index-title{
+	text-align: center;
+}
+
+#blog-list{
+	overflow: hidden;
+}
+#blog-list li{
+	list-style: none;
+	color: #000;
+}
+#blog-list li a{
+	color: #000;
+	text-decoration: none;
+}
+
+#blog-list li a:visited{
+	color: #000;
+	text-decoration: none;
+}
+
+#blog-list li p,#blog-list li h2 {
+	padding: 0;
+	margin: 0;
+}
+
+#blog-list li p{
+	text-indent: 20px;
+}
+
