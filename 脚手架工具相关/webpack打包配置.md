@@ -23,7 +23,6 @@
 
 > ``` 
 > const path = require('path');    
-
 > module.exports = {     
 >   entry: './path/to/my/entry/file.js',        
 >   output: {     
@@ -45,7 +44,6 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 
 > ``` 
 > const path = require('path');
-
 > const config = {           
 >   output: {           
 >        filename: 'my-first-webpack.bundle.js'             
@@ -56,7 +54,6 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 >     ]          
 >   }           
 > };           
-
 > module.exports = config;
 > ``` 
 
@@ -68,9 +65,7 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 
 > ``` 
 > const HtmlWebpackPlugin = require('html-webpack-plugin'); // 通过 npm 安装
-
 > const webpack = require('webpack'); // 用于访问内置插件
-
 > const config = {
   module: {         
 >   rules: [
@@ -82,7 +77,6 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 >     new HtmlWebpackPlugin({template: './src/index.html'})      
 >   ]           
 > };          
-
 > module.exports = config;
 > ``` 
 
