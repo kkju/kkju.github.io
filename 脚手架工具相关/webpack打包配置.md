@@ -67,7 +67,7 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 > const HtmlWebpackPlugin = require('html-webpack-plugin'); // 通过 npm 安装
 > const webpack = require('webpack'); // 用于访问内置插件
 > const config = {
-  module: {         
+>  module: {         
 >   rules: [
 >        { test: /\.txt$/, use: 'raw-loader' }
 > 		]
