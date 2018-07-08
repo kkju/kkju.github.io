@@ -11,14 +11,17 @@
 > 入口起点(entry point)指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。进入入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的。每个依赖项随即被处理，最后输出到称之为 bundles 的文件中。
 通常情况下是目录下的名为：webpack.config.js 的文件：
 
+> ``` 
 > module.exports = {    
 >   entry: './path/to/my/entry/file.js'      
-> };        
+> }; 
+> ```        
 
 #### 2、输出(output)
 
 配置打包后数据的输出文件，一般叫做：bundles(打包成一捆一捆的文件)，下面就是配置输出的文件叫做：my-first-webpack.bundle.js
 
+> ``` 
 > const path = require('path');    
 
 > module.exports = {     
@@ -27,7 +30,8 @@
 >     path: path.resolve(__dirname, 'dist'),     
 >     filename: 'my-first-webpack.bundle.js'    
 >   }         
-> };    
+> }; 
+> ```    
 
 #### 3、加载器(loader)
 
@@ -39,6 +43,7 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 
 示例：
 
+> ``` 
 > const path = require('path');
 
 > const config = {           
@@ -53,6 +58,7 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 > };           
 
 > module.exports = config;
+> ``` 
 
 上面的匹配的loader含义：当遇到匹配规则以.txt结尾，试用 raw-loader这个工具去解析一遍   
 
@@ -60,22 +66,23 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 
 插件可以实现复杂的：打包优化和压缩、重新定义环境中的变量等功能。插件接口功能极其强大，可以用来处理各种各样的任务。
 
-
+> ``` 
 > const HtmlWebpackPlugin = require('html-webpack-plugin'); // 通过 npm 安装
 
 > const webpack = require('webpack'); // 用于访问内置插件
 
 > const config = {
   module: {         
->     rules: [
->       { test: /\.txt$/, use: 'raw-loader' }
->     ]
+>   rules: [
+>        { test: /\.txt$/, use: 'raw-loader' }
+> 		]
 >   },
 >   plugins: [         
 >     new webpack.optimize.UglifyJsPlugin(),        
 >     new HtmlWebpackPlugin({template: './src/index.html'})      
 >   ]           
-> };           
+> };          
 
-module.exports = config;
+> module.exports = config;
+> ``` 
 
