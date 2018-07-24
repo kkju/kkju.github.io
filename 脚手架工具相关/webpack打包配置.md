@@ -109,13 +109,21 @@ c、在 webpack 配置中定义 loader 时，要定义在 module.rules 中，而
 按照步骤输入：
 
 > ? Project name testwebpack
+
 > ? Project description 按照步奏，输入名称：testwebpack
+
 > ? Author kk 704798445@qq.com
+
 > ? Vue build standalone
+
 > ? Install vue-router? Yes
+
 > ? Use ESLint to lint your code? No
+
 > ? Set up unit tests No
+
 > ? Setup e2e tests with Nightwatch? No
+
 > ? Should we run `npm install` for you after the project has been created? (recommended) npm
 
 会生成一个package.json文件，如下：
@@ -235,12 +243,19 @@ build目录下的：webpack.dev.conf.js 这个文件，引用了webpack.base.con
 >     ]
 >   },
 >   node: { ... }
-}
+> }
 > ```
 
 以上文件配置，为一个标准的配置逻辑，包含了：入口（entry）、输出(output)、加载器(loader)、插件(plugins) 的完整的配置。
 
 后续vue配置，可以看另外一个文档：[vue官方文档地址](https://cn.vuejs.org/v2/guide/installation.html  "vue官方文档地址");
+
+
+#### 配置一个demo
+
+我们现在要配置一个逻辑如下：
+需要根据依赖，编译成不同的文件，并且将文件
+配置如下：
 
 
 
