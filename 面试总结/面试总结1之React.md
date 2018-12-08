@@ -148,6 +148,14 @@ setTimeout(()=>{
 }, 100);
 ```
 
+##### redux-react
+
+> react-redux库提供Provider组件通过context方式向应用注入store，然后可以使用connect高阶方法，获取并监听store，然后根据store state和组件自身props计算得到新props，注入该组件，并且可以通过监听store，比较计算出的新props判断是否需要更新组件。     
+
+
+
+
+
 #### react生命周期
 
 生命周期图如下：

@@ -36,7 +36,7 @@ function a(){
        }           
    }            
    b();           
-} 
+}
 function a(){             
    if(false){         
         function b(){        
@@ -332,31 +332,7 @@ reader.onload = function () {
 };
 ```
 
-### 二、KOA
-> 通过利用 async 函数，Koa 帮你丢弃回调函数，并有力地增强错误处理。       
-> Koa 并没有捆绑任何中间件， 而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。      
-> koa的洋葱模型，平常的模块主要使用 use 调用 middleware    
-koa做了什么：
-* 1.封装了ctx
-* 2.中间件
-* 3.解析请求体（koa-bodyparser)
-* 4.解析路由（koa-router）
-
-> http.server对象是一个EventEmitter，有一个重要的事件就是request，每当服务器收到一个请求后，便会触发request事件。
-
-#### koa中间件
-
-> 平常我们开发遇到的很多都是koa中间件    
-
-1、koa添加中间件的方式是app.use(fn)。app就是koa模块的实例。     
-2、compose方法就是用来链式执行中间件的。
-
-> 以 koa-bodyparser 为例子：
-
-1、koa-bodyparser中间件是将我们的 post 请求和表单提交的查询字符串转换成对象；
-2、Koa 使用中间件的过程就是一个典型的 “装饰器” 模式， 并且Koa 具备 “洋葱模型” 和异步特点。
-
-### 三、PM2
+### 二、PM2
 
 #### 关于node的cluster
 
