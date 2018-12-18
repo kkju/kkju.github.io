@@ -37,8 +37,6 @@ b、Cache-Control
 再次请求数据时，客户端将备份的缓存标识发送给服务器，服务器根据缓存标识进行判断，判断成功后，返回304状态码，通知客户端比较成功，可以使用缓存数据。
 
 
-
-
 ##### 1、Last-Modified/If-Modified-Since规则
 
 Last-Modified：
